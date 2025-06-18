@@ -10,16 +10,19 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  
    <div class="topbar">
+   <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
  <div style="display: flex; flex-direction: column; align-items: center; margin-right: 15px;">
-    <i class="fas fa-user-circle" style="font-size: 50px; color: white;"></i>
+   <div class="img"> <i class="fas fa-user-circle" style="font-size: 50px; color: white;"></i></div>
    <span style="font-size: 18px; color: white;">John Doe</span>
   </div>
     <h1>Welcome to Evaltree</h1>
     <button id="topup-button">Top-Up Credits</button>
   </div>
-
-  <div class="sidebar">
+  
+   <div class="sidebar">
     <button onclick="showSection('credit')"><i class="fas fa-wallet"></i> Balance</button>
     <button onclick="showSection('assets')"><i class="fas fa-gem"></i> Collectibles</button>
     <button onclick="showSection('transactions')"><i class="fas fa-receipt"></i> History</button>

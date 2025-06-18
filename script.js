@@ -28,4 +28,27 @@
 
       window.showSection = showSection;
     });
-  
+ 
+ 
+   
+  function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('show');
+  }
+
+  // This function is called when sidebar buttons are clicked
+  function showSection(sectionId) {
+    // Hide all sections
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => section.style.display = 'none');
+
+    // Show the selected section
+    document.getElementById(sectionId).style.display = 'block';
+
+    // Auto-hide sidebar if on mobile
+    if (window.innerWidth <= 768) {
+      const sidebar = document.querySelector('.sidebar');
+      sidebar.classList.remove('show');
+    }
+  }
+
