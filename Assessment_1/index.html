@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evaltree Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+   <div class="topbar">
+ <div style="display: flex; flex-direction: column; align-items: center; margin-right: 15px;">
+    <i class="fas fa-user-circle" style="font-size: 50px; color: white;"></i>
+   <span style="font-size: 18px; color: white;">John Doe</span>
+  </div>
+    <h1>Welcome to Evaltree</h1>
+    <button id="topup-button">Top-Up Credits</button>
+  </div>
+
+  <div class="sidebar">
+    <button onclick="showSection('credit')"><i class="fas fa-wallet"></i> Balance</button>
+    <button onclick="showSection('assets')"><i class="fas fa-gem"></i> Collectibles</button>
+    <button onclick="showSection('transactions')"><i class="fas fa-receipt"></i> History</button>
+    <button onclick="showSection('raffle')"><i class="fas fa-ticket-alt"></i> Raffle</button>
+  </div>
+
+  <div class="content">
+    <div class="section" id="credit" style="margin-top: 0;">
+      <h2>Your Balance</h2>
+      <div class="credit-scroll">
+        <p>Current Credit: <strong>1200</strong> points</p>
+        <p>Bonus Credit: <strong>200</strong> points</p>
+        <p>Promotional Credit: <strong>50</strong> points</p>
+        <p>Lifetime Earned: <strong>1450</strong> points</p>
+      </div>
+    </div>
+
+    <div class="section" id="assets">
+      <h2>Your Collectibles</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="https://picsum.photos/id/1035/200/140" alt="Collectible" style="width:100%; border-radius:8px;">
+          <p><strong>Golden Frame</strong></p>
+          <small>3 of 100</small><br>
+          <small>Purchased: 2025-06-15</small>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/id/1015/200/140" alt="Collectible" style="width:100%; border-radius:8px;">
+          <p><strong>Sunset Canvas</strong></p>
+          <small>7 of 200</small><br>
+          <small>Purchased: 2025-06-12</small>
+        </div>
+        <div class="card">
+          <img src="https://picsum.photos/id/1045/200/140" alt="Collectible" style="width:100%; border-radius:8px;">
+          <p><strong>Ocean Gem</strong></p>
+          <small>12 of 150</small><br>
+          <small>Purchased: 2025-06-08</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="transactions"></div>
+
+    <div class="section" id="raffle">
+      <h2> Your Raffle Tickets</h2>
+       <button class="raffle-button">You have 3 active tickets</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+ </body>
+</html>
